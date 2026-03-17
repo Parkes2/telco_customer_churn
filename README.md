@@ -48,11 +48,11 @@ This document shows an example Data Science project utilising a dataset built ar
 
 ### Class Imbalance of the Target Variable:
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ### Comparing Distributions of Churned vs Non-Churned Customers
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Customers with lower Tenure (and hence Total Charges) were more likely to have churned, this is simply explained by the fact that happy customers are likely to stay subscribed (survivorship bias) - thus we can say tenure *correlates* with satisfaction but we cannot say that customers are gaining satisfaction by staying customers for longer.
 
@@ -60,15 +60,15 @@ Another important factor to consider is the Contract variable: customers on One 
 
 ### Contract Types and Churn
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Here we can see that the Contract type has a relationship with Churn
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Futhermore, lots of the low-tenure customers are on Month-to-month contracts.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Figure above shows the Monthly charges for the different Contract and the proportion of Churned and Non-Churned customers (The churn groups are normalised within group)
 
@@ -76,11 +76,11 @@ We can see from these plots that there is price sensitivity for each of the grou
 
 ### Services and Churn
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 Of all the services, the Internet service, Online security and Tech support have the strongest relationship with Churn
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 We also see a difference in distribution with the number of services
 
@@ -104,19 +104,19 @@ Below the models are compared:
 |  0 | Logistic Regression | 0.848161 | 0.0160863 |
 |  1 | Gradient Boosting   | 0.845298 | 0.0172475 |
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 The performance slightly prefers Logistic Regression, however the difference is minimal. The reason why Logistic Regression is used is because this allows for a more simplistic interpretation with the use of the coefficients.
 
 The structure of the model is as follows:
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 The numerical values (Charges etc.) are Scaled. The categorical variables that are not the interaction N-grams and One-Hot encoded. The N-gram features are Target Encoded. Lastly dummy variables are passthroughed (They are essentially already One Hot Encoded).
 
 ### Feature Importance (Linear Coefficients)
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 
 All of the features with a coefficient value of greater than 0.5 are shown here.
 
@@ -170,7 +170,7 @@ The model is finding more of the customers that Churned (higher recall) however 
 ### Demonstrating the Cost Saving
 
 Below is a Confusion Matrix for just the Marginal Predictions (i.e. the predictions where the predicted probability was between 0.29 and 0.5)
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 The accuracy of these predictions is 40%, however with the 52 newly identified Churned customers - can the the business make a saving?
 
@@ -183,4 +183,4 @@ $$ -5*52 = -260$$
 Therefore, when we assume that the cost of Churned customers is greater than a retention scheme we see that a model with a lower prediction threshold can make savings when compared with a standard model.
 
 Below we plot the point on the Precision Recall, ROC and Cost score curves with markers showing the values for the different thresholds respectively. The important point being that the model with lower threshold (ergo higher recall and lower precision) minimises the loss shown on the third plot
-![alt text](image-14.png)
+![alt text](images/image-14.png)
