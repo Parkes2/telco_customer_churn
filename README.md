@@ -177,11 +177,11 @@ Below is a Confusion Matrix for just the Marginal Predictions (i.e. the predicti
 
 The accuracy of these predictions is 40%, however with the 52 newly identified Churned customers - can the the business make a saving?
 
-$$Cost_{new predictions} = -2.25*Actual Churns + -1 * False Positives$$
-$$ -2.25*52 + -1*79 = -196$$
+$$Cost_{new predictions} = -2.25 * Actual Churns + -1 * False Positives$$
+$$ -2.25 * 52 + -1 * 79 = -196$$
 
-$$ Cost_{old predictions} = -5*FalseNegatives$$
-$$ -5*52 = -260$$
+$$ Cost_{old predictions} = -5 * FalseNegatives$$
+$$ -5 * 52 = -260$$
 
 Therefore, when we assume that the cost of Churned customers is greater than a retention scheme we see that a model with a lower prediction threshold can make savings when compared with a standard model.
 
