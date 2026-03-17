@@ -172,6 +172,7 @@ The model is finding more of the customers that Churned (higher recall) however 
 ### Demonstrating the Cost Saving
 
 Below is a Confusion Matrix for just the Marginal Predictions (i.e. the predictions where the predicted probability was between 0.29 and 0.5)
+
 ![alt text](images/image-13.png)
 
 The accuracy of these predictions is 40%, however with the 52 newly identified Churned customers - can the the business make a saving?
@@ -185,4 +186,5 @@ $$ -5*52 = -260$$
 Therefore, when we assume that the cost of Churned customers is greater than a retention scheme we see that a model with a lower prediction threshold can make savings when compared with a standard model.
 
 Below we plot the point on the Precision Recall, ROC and Cost score curves with markers showing the values for the different thresholds respectively. The important point being that the model with lower threshold (ergo higher recall and lower precision) minimises the loss shown on the third plot
+
 ![alt text](images/image-14.png)
