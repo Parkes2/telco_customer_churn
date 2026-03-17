@@ -16,6 +16,8 @@
 
 This document shows an example Data Science project utilising a dataset built around customer churn. The goal of the modelling was to predict customers that are likely to churn, this was then extended to minimise loss from churning customers.
 
+For more detail and the underlying code see `customer_churn.ipynb`
+
 **Dataset:** [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn). A fictional company's data. There are demographic features as well as billing and service information
 
 ### Description of Dataset
